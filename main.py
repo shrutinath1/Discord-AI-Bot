@@ -23,4 +23,7 @@ async def on_ready():
 @bot.event
 async def on_member_join(member):
     await member.send(f"Welcome to the server {member.name}")
-  
+
+@bot.event
+async def on_message(message):
+    #insert safety features
