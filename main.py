@@ -26,4 +26,15 @@ async def on_member_join(member):
 
 @bot.event
 async def on_message(message):
-    #insert safety features
+    if message.author == bot.user:
+        return
+
+    if "shit" in message.content.lower():
+        await message.delete()
+        await message.channel.send(f"{message.author.mention} - Refrain from using that word.")
+
+    await bot.process_commands(message)
+
+@bot.command()
+async def hello(ctx):
+    await ctx.send(f"Hello {ctx.author.mention}!")
