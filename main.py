@@ -47,3 +47,6 @@ async def assign(ctx):
         await ctx.send(f"{ctx.author.mention} is now assigned to {secret_role}")
     else:
         await ctx.send("Role doesn't exist")
+
+@bot.command()
+async def remove(ctx):
