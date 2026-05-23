@@ -38,3 +38,12 @@ async def on_message(message):
 @bot.command()
 async def hello(ctx):
     await ctx.send(f"Hello {ctx.author.mention}!")
+
+@bot.command()
+async def assign(ctx):
+    role = discord.utils.get(ctx.guild.roles, name=secret_role)
+    if role:
+        await ctx.author.add_roles(role)
+        await ctx.send(f"{ctx.author.mention} is now assigned to {secret_role}")
+    else:
+        await ctx.send("Role doesn't exist")
