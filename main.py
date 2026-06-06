@@ -50,3 +50,4 @@ async def assign(ctx):
 
 @bot.command()
 async def remove(ctx):
+    role = discord.utils.get(ctx.guild.roles, name=secret_role)
