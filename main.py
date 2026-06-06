@@ -56,3 +56,4 @@ async def remove(ctx):
         await ctx.send(f"{ctx.author.mention} has had the {secret_role} removed")
     else:
         await ctx.send("Role doesn't exist")
+
