@@ -53,4 +53,4 @@ async def remove(ctx):
     role = discord.utils.get(ctx.guild.roles, name=secret_role)
     if role:
         await ctx.author.remove_roles(role)
-        await
+        await ctx.send(f"{ctx.author.mention} has had the {secret_role} removed")
